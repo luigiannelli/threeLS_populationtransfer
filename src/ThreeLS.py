@@ -431,3 +431,24 @@ def load_object(filename):
 
 def gaussian(x, T):
     return np.exp(-((x / T) ** 2))
+
+
+def Omm1rand(Ω_, env_parameters):
+    return (Ω_ - 1) + np.random.rand(2 * env_parameters["n_steps"])
+
+
+def Om(Ω_, env_parameters):
+    return Ω_ * np.ones(2 * env_parameters["n_steps"])
+
+
+def Omgaussian(Ω_, env_parameters):
+    T_ = env_parameters["T"]
+    tlist = np.linspace(0, T_, env_parameters["n_steps"], endpoint=False)
+
+    return Ω_ * np.append(
+        gaussian(tlist - 0.7 * T_, T_ / 3), gaussian(tlist - 0.3 * T_, T_ / 3)
+    )
+
+
+def Omrand(Ω_, env_parameters):
+    return Ω_ * np.random.rand(2 * pars_["env_parameters"]["n_steps"])

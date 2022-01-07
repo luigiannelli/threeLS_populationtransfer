@@ -1,5 +1,6 @@
 # A Tutorial on Optimal Control and Reinforcement Learning methods for Quantum Technologies
-by Luigi Giannelli, Pierpaolo Sgroi, Jonathon Brown, Gheorghe Sorin Paraoanu, Mauro Paternostro, Elisabetta Paladino, and Giuseppe Falci
+by Luigi Giannelli, Pierpaolo Sgroi, Jonathon Brown, Gheorghe Sorin Paraoanu, Mauro Paternostro, Elisabetta Paladino, and Giuseppe Falci  
+[arXiv:2112.07453](https://arxiv.org/abs/2112.07453)
 
 ## Installation
 Tested with *python 3.9.7*.

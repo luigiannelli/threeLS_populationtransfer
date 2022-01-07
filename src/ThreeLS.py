@@ -331,7 +331,7 @@ def plot_episode(episode, tlist, offset=0.05, env_py=None):
         for _ in range(4):
             ax[1].plot(
                 tlist,
-                expect(result.states, env_py.sig[_][_]),
+                expect(env_py.sig[_][_], result.states),
                 ".",
                 label=r"$\vert {} \rangle$".format(_ + 1),
             )
@@ -377,7 +377,7 @@ def plot_evolution(amps, env_parameters, mesolve_check=False):
         for _ in range(4):
             ax[1].plot(
                 tlist,
-                expect(result.states, env_py.sig[_][_]),
+                expect(env_py.sig[_][_], result.states),
                 ".",
                 label=r"$\vert {} \rangle$".format(_ + 1),
             )
@@ -389,7 +389,7 @@ def plot_evolution(amps, env_parameters, mesolve_check=False):
     print(f"final efficiency = {state_list[-1,2]}")
     if mesolve_check:
         print(
-            f"final efficiency (mesolve) = {expect(result.states[-1], env_py.target_state)}"
+            f"final efficiency (mesolve) = {expect(env_py.target_state, result.states[-1])}"
         )
 
     return fig

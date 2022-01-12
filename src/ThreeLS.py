@@ -1,6 +1,6 @@
 # Optimal Control and Reinforcement Learning tutorial for
 # three-level population transfer
-# Copyright (C) 2021 Luigi Giannelli
+# Copyright (C) 2022 Luigi Giannelli
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

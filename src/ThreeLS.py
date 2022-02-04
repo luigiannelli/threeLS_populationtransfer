@@ -25,7 +25,7 @@ from scipy.optimize import minimize
 from tf_agents.environments import py_environment
 from tf_agents.specs import array_spec
 from tf_agents.trajectories import time_step as ts
-from tqdm.auto import tqdm, trange
+from tqdm.auto import trange
 
 opts = Options(atol=1e-11, rtol=1e-9, nsteps=int(1e6))
 # opts = Options(atol=1e-13, rtol=1e-11, nsteps=int(1e6))
@@ -451,4 +451,4 @@ def Omgaussian(Ω_, env_parameters):
 
 
 def Omrand(Ω_, env_parameters):
-    return Ω_ * np.random.rand(2 * pars_["env_parameters"]["n_steps"])
+    return Ω_ * np.random.rand(2 * env_parameters["n_steps"])
